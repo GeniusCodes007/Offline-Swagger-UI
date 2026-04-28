@@ -21,7 +21,7 @@
         "kind": 2,
         "importPath": "setting_up_swagger_offline",
         "description": "setting_up_swagger_offline",
-        "peekOfCode": "def docs():\n    # Import the RedirectResponse class to refer Swagger UI to another page for the documentation\n    from fastapi.responses import RedirectResponse\n    return RedirectResponse(url=\"/static/my_swagger/index.html\")\n\"\"\"",
+        "peekOfCode": "def docs():\n    # Import the RedirectResponse class to refer Swagger UI to another page for the documentation\n    from fastapi.responses import RedirectResponse\n    return RedirectResponse(url=\"/static/my_swagger/index.html\")\nFifth: In the directory copied into the directory 'static', find: 'url: \\\"https://petstore.swagger.io/v2/swagger.json\\\"' and replace with 'url: \\\"/openapi.json\\\"' \n\"\"\"",
         "detail": "setting_up_swagger_offline",
         "documentation": {}
     }

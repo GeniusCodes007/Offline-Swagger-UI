@@ -50,17 +50,29 @@ Fourth: In the file containing your FastAPI app instance, do put the following c
 
 
 app_instance_name=FastAPI(
+    
                 # Disable the urls for both docs and redoc
+                
                 docs_url=None,
+                
                 redoc_url=None,
+                
                    )    
 
 # Create url to display the Swagger UI documentation
+
 @shop_app.get("/docs", include_in_schema=False)
+
 def docs():
+
     # Import the RedirectResponse class to refer Swagger UI to another page for the documentation
+    
     from fastapi.responses import RedirectResponse
+    
     return RedirectResponse(url="/static/my_swagger/index.html")
+    
+
+Fifth: In the directory copied into the directory 'static', find: 'url: \"https://petstore.swagger.io/v2/swagger.json\"' and replace with 'url: \"/openapi.json\"' 
 
 
 """
