@@ -1,0 +1,28 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "docs",
+        "kind": 2,
+        "importPath": "setting_up_swagger_offline",
+        "description": "setting_up_swagger_offline",
+        "peekOfCode": "def docs():\n    # Import the RedirectResponse class to refer Swagger UI to another page for the documentation\n    from fastapi.responses import RedirectResponse\n    return RedirectResponse(url=\"/static/my_swagger/index.html\")\n\"\"\"",
+        "detail": "setting_up_swagger_offline",
+        "documentation": {}
+    }
+]
