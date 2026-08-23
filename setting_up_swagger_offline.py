@@ -57,7 +57,11 @@ app_instance_name=FastAPI(
                 
                 redoc_url=None,
                 
-                   )    
+                   )  
+
+# 
+
+bible_app.mount('/static', StaticFiles(directory='static'), name='static')
 
 # Create url to display the Swagger UI documentation
 
@@ -72,7 +76,17 @@ def docs():
     return RedirectResponse(url="/static/my_swagger/index.html")
     
 
-Fifth: In the directory copied into the directory 'static', find: 'url: \"https://petstore.swagger.io/v2/swagger.json\"' and replace with 'url: \"/openapi.json\"' 
+Fifth: In the directory copied into the directory 'static', 
+
+find: 'url: \"https://petstore.swagger.io/v2/swagger.json\"' and replace with 'url: \"./openapi.json\"' 
+
+it may be found in:
+
+-> index.html, or
+
+-> swagger-initialiser.js
+
+
 
 
 """
